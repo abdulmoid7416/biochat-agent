@@ -1,0 +1,11 @@
+streamlit
+agno
+biomcp-python
+python-dotenv
+requests
+sqlalchemy
+pydantic
+httpx
+groq
+fastapi
+uvicorn
