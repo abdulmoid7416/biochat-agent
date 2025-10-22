@@ -19,35 +19,38 @@ st.set_page_config(
 # Custom CSS for better styling
 st.markdown("""
 <style>
+    .stApp {
+        padding-top: 1rem;
+    }
     .main-header {
         font-size: 3rem;
         font-weight: bold;
         color: #1f77b4;
         text-align: center;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
     }
     .tagline {
         font-size: 1.2rem;
         color: #666;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
     }
     .description {
         font-size: 1.1rem;
         color: #444;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
         line-height: 1.6;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
     }
     .user-type-selector {
-        margin: 2rem 0;
+        margin: 0.5rem 0;
         text-align: center;
     }
     .query-section {
-        margin: 2rem auto;
+        margin: 0.5rem auto;
         max-width: 800px;
         text-align: center;
     }
