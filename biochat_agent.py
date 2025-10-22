@@ -5,7 +5,11 @@ Handles BioMCP server connection for cloud deployment
 
 import os
 import streamlit as st
-from biochat_agent import get_biochat_agent
+from agno.agent import Agent
+from agno.db.sqlite import SqliteDb
+from agno.models.groq import Groq
+from agno.tools.mcp import MCPTools
+from agno.os import AgentOS
 
 # Streamlit Cloud Configuration
 def configure_for_streamlit_cloud():
@@ -34,12 +38,6 @@ class CloudBioChatAgent:
     def _initialize_agent(self):
         """Initialize agent with cloud configuration"""
         try:
-            from agno.agent import Agent
-            from agno.db.sqlite import SqliteDb
-            from agno.models.groq import Groq
-            from agno.tools.mcp import MCPTools
-            from agno.os import AgentOS
-            
             # Cloud configuration
             biomcp_url = configure_for_streamlit_cloud()
             llm_model = os.getenv("LLM_MODEL", "qwen/qwen3-32b")
