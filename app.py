@@ -47,7 +47,9 @@ st.markdown("""
         text-align: center;
     }
     .query-section {
-        margin: 2rem 0;
+        margin: 2rem auto;
+        max-width: 800px;
+        text-align: center;
     }
     .chat-message {
         padding: 1rem;
@@ -126,14 +128,6 @@ def display_user_type_selector():
     
     st.markdown('</div>', unsafe_allow_html=True)
 
-def display_disclaimer():
-    """Display medical disclaimer"""
-    st.markdown("""
-    <div class="disclaimer">
-    <strong>⚠️ Medical Disclaimer:</strong> This tool provides research information only. 
-    Always consult healthcare professionals for medical decisions.
-    </div>
-    """, unsafe_allow_html=True)
 
 def display_chat_history():
     """Display chat history"""
@@ -216,16 +210,6 @@ def main():
                     add_message("assistant", error_response)
     
     st.markdown('</div>', unsafe_allow_html=True)  # Close query-section
-    
-    # Display disclaimer
-    display_disclaimer()
-    
-    # Footer
-    st.markdown("---")
-    st.markdown(
-        "**BioChat** - Powered by Agno Framework and BioMCP | "
-        "Specialized for Rare Genetic Diseases"
-    )
     
     st.markdown('</div>', unsafe_allow_html=True)  # Close container
 
