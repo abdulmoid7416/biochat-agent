@@ -19,11 +19,9 @@ def configure_for_streamlit_cloud():
     if os.getenv("STREAMLIT_CLOUD"):
         # Streamlit Cloud environment
         biomcp_url = os.getenv("BIOMCP_SERVER_URL", "https://biomcp-server-production.up.railway.app/mcp")
-        st.info("🌐 Using Railway BioMCP server for cloud deployment")
     else:
         # Local development
         biomcp_url = os.getenv("BIOMCP_SERVER_URL", "http://localhost:8080/mcp")
-        st.info("🏠 Using local BioMCP server")
     
     return biomcp_url
 
